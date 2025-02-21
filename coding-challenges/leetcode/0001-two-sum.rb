@@ -21,53 +21,47 @@
 # Entrada: nums = [3,3], alvo = 6
 #  Saída: [0,1]
 
-
-
-
-
 def two_sum(nums, target)
-
-    hash = {}
-
+    hash = {}  # Hash para armazenar os números já vistos
+  
     nums.each_with_index do |num, index|
-
-        complement = target - num
-
-
-        if num_to_index.key?(complement)
-
-            return
-
-
-        [num_to_index[complement], i]
-        end
-
-            num_to_index[num] = i
-            end
-
-
-
-    []
-
-        end
+      complemento = target - num
+      return [hash[complemento], index] if hash.key?(complemento)
+      hash[num] = index
+    end
+  
+    nil  # Retorna nil caso não encontre uma solução
+  end
+  
+  # Exemplo de uso:
+  nums = [2, 7, 11, 15]
+  target = 9
+  result = two_sum(nums, target)
+  
+  if result.nil?
+    puts "Nenhuma solução encontrada."
+  else
+    puts result.inspect  # Isso imprimirá "[0, 1]"
+  end
 
 
 
-        nums = [2, 7, 11, 15]
-        target = 9
-
-
-        result = two_sum(nums, target)
 
 
 
-        if result.any?
-        puts "#{result.inspect}"
 
 
-        else 
-            puts "nenhum resultado"
 
 
-        end
+
+
+
+
+
+
+
+
+
+
+
 
