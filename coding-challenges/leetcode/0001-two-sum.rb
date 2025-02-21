@@ -25,4 +25,49 @@
 
 
 
- 
+def two_sum(nums, target)
+
+    hash = {}
+
+    nums.each_with_index do |num, index|
+
+        complement = target - num
+
+
+        if num_to_index.key?(complement)
+
+            return
+
+
+        [num_to_index[complement], i]
+        end
+
+            num_to_index[num] = i
+            end
+
+
+
+    []
+
+        end
+
+
+
+        nums = [2, 7, 11, 15]
+        target = 9
+
+
+        result = two_sum(nums, target)
+
+
+
+        if result.any?
+        puts "#{result.inspect}"
+
+
+        else 
+            puts "nenhum resultado"
+
+
+        end
+
