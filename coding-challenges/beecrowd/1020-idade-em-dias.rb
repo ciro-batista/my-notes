@@ -32,5 +32,10 @@
 days = gets.to_i
 
 y = days / 365
-m = y / 12 
-d = 
+m = (days % 365) / 30 
+d = (days % 365) % 30 
+
+
+puts "#{y} ano(s)"
+puts "#{m} mes(es)"
+puts "#{d} dia(s)"
